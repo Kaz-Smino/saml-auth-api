@@ -7,6 +7,9 @@ services:
       dockerfile: docker/laravel/Dockerfile
     ports:
       - "8000:8000"
+      - "5173:5173"
+    volumes:
+      - ../../:/var/www/html
     networks:
       - keycloak-network
 
