@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.1.2
+    command: ["start-dev"]
+    environment:
+      - KC_BOOTSTRAP_ADMIN_USERNAME=admin
+      - KC_BOOTSTRAP_ADMIN_PASSWORD=admin
+    ports:
+      - "8080:8080"
+    networks:
+      - keycloak-network
+
+networks:
+  keycloak-network:
+    driver: bridge
