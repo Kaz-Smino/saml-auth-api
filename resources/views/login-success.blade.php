@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Success</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
-    <div class="success-container">
-        <h1>SAML SSO Authentication Successful</h1>
-        <p>You have successfully logged in using SAML Single Sign-On. Welcome to the protected area!</p>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white shadow-lg rounded-lg p-8 max-w-md w-full text-center">
+        <h1 class="text-4xl font-bold text-green-500 mb-4">Welcome Back!</h1>
+        <p class="text-gray-700 mb-6">
+            Successfully logged in using 
+            <span class="font-semibold text-green-500">SAML Single Sign-On</span>.
+            <br>
+            Enjoy your stay!
+        </p>
     </div>
 </body>
 </html>
